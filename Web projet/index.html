@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Foods | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">HealthFoods</div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/cart.html">Cart</a></li>
+                <li><a href="/checkout.html">Checkout</a></li>
+                <li><a href="/admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header><section class="hero">
+    <h1>Welcome to HealthFoods</h1>
+    <p>Fresh, Organic, and Nutritious Foods Delivered to Your Doorstep</p>
+    <a href="#products" class="btn">Shop Now</a>
+</section>
+<section id="products" class="products-section">
+    <h2>Our Products</h2>
+    <div class="products-grid">
+        <div class="product-card">
+            <img src="/static/images/oats.jpg" alt="Oats">
+            <h3>Organic Oats</h3>
+            <p>High fiber, heart-healthy oats.</p>
+            <span>₹300</span>
+            <button onclick="addToCart('Organic Oats', 300)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="/static/images/almonds.jpg" alt="Almonds">
+            <h3>Raw Almonds</h3>
+            <p>Protein-packed natural almonds.</p>
+            <span>₹500</span>
+            <button onclick="addToCart('Raw Almonds', 500)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="/static/images/Gulkand.jpg" alt="Gulkand">
+            <h3>Gulkand</h3>
+            <p>Homemade Gulkand with Zero Preservatives</p>
+            <span>₹400</span>
+            <button onclick="addToCart('Raw Gulkand', 600)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="/static/images/Ashwagandha.jpg" alt="Ashwagandha Powder">
+            <h3>Raw Ashwagandha</h3>
+            <p>Stress Relief & Energy Boost | 100g.</p>
+            <span>₹1000</span>
+            <button onclick="addToCart('Raw Ashwagandha', 1000)">Add to Cart</button>
+        </div>
+        <!-- Add more product cards here -->
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 HealthFoods. All rights reserved.</p>
+</footer>
+<script>
+    function addToCart(name, price) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push({ name, price });
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert(name + " added to cart!");
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel - HealthFood</title>
+  <link rel="stylesheet" href="adminstyle.css" />
+</head>
+<body>
+
+  <!-- Navbar - Same as index/cart/checkout -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">HealthFood</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+        <li><a href="admin.html" class="active">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Admin Panel</h1>
+    <!-- Add Product Form -->
+    <section class="form-section">
+      <h2>Add Product</h2>
+      <form id="add-product-form">
+        <input type="text" id="product-name" placeholder="Product Name" required />
+        <input type="number" id="product-price" placeholder="Price" required />
+        <input type="text" id="product-category" placeholder="Category" required />
+        <button type="submit" class="btn">Add Product</button>
+      </form>
+    </section>
+
+    <!-- Product List Table -->
+    <section class="table-section">
+      <h2>Product List</h2>
+      <table class="product-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="product-list">
+          <!-- Dynamic product rows here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Link JavaScript -->
+  <script src="admin.js"></script>
+</body>
+</html>
+
